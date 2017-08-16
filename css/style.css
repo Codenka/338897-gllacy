@@ -7,3 +7,62 @@
     background-color: #849d8f;
 }
 
+h1 {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: bold;
+}
+
+.bonus-item h3 {
+    font-size: 23px;
+    line-height: 27px;
+    font-weight: bold;
+}
+
+.bonus-item p {
+    font-size: 12px;
+    line-height: 14.44px;
+    font-weight: bold;
+}
+
+.features h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: medium;
+    color: #323232; 
+}
+
+.features p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: regular;
+    color: #323232;
+}
+
+.from-blog h2 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: medium;
+    color: #323232;
+}
+
+.subscription p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: regular;
+    color: #5a5a5a;
+}
+
+.contacts p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: regular;
+    color: #323232;
+}
+
+.feedback b {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: medium;
+    color: #323232;
+}
