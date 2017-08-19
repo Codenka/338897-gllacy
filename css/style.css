@@ -66,3 +66,8 @@ h1 {
     font-weight: medium;
     color: #323232;
 }
+
+.product-item img {
+    border: none;
+    border-radius: 50%;
+}

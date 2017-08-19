@@ -28,40 +28,48 @@
                 <li><a href="#">О Компании</a></li>
             </ul>
 
-             <div class="user-navigation search"><p>Поиск</p>
-                       <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                        <input type="search" placeholder="Что ищем?">
+            <button class="user-navigation search" type="button">Поиск</button>
+                       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                           <label class="visually-hidden" for="search">Поле поиска по сайту</label>
+                            <input id="search" type="search" placeholder="Что ищем?">
                         </form>
-            </div>
             
-            <div class="user-navigation login-link">
-                    <p>Вход</p>
-                        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                            <p><input type="text" name="login" placeholder="Электронная почта"></p>
-                            <p><input type="password" name="password" placeholder="Пароль"></p>
+            
+            <div class="user-navigation">
+                    <button class="login-link" type="button">Вход</button>
+                            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                            <p>
+                                <label class="visually-hidden" for="user-login">Электронная почта</label>
+                               <input id="user-login" type="text" name="login" placeholder="Электронная почта">
+                            </p>
+                            <p>
+                                <label class="visually-hidden" for="user-password">Пароль</label>
+                               <input id="user-password" type="password" name="password" placeholder="Пароль">
+                            </p>
                             <p>
                                 <a class="renew" href="#">Забыли пароль?</a><br>
                                 <a class="registration" href="#">Новая регистрация</a>
                             </p>
                                 <button class="btn" type="submit">Войти</button>
-                        </form>
+                            </form>
             </div>
 
-            <div class="user-navigation cart">
-                <a href="cart.html">2 товара</a>
+            <div class="user-navigation">
+                <a class="cart-link-order" href="cart.html">2 товара</a>
                 
                 <section class="cart-order">
                 <table>
                     <caption class="visually-hidden">Корзина с товарами</caption>
-                    <tbody><tr>
-                        <td>x</td>
+                    <tbody>
+                    <tr>
+                        <td><button class="visually-hidden" type="button">Удалить</button></td>
                         <td><img src="img/mini-creamy-orange.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
                         <td><a href="#">Пломбир с апельсиновым джемом</a></td>
                         <td>1,5 кг х <span>200 руб.</span></td>
                         <td>300 руб.</td>
                     </tr>
                     <tr>
-                        <td>x</td>
+                        <td><button class="visually-hidden" type="button">Удалить</button></td>
                         <td><img src="img/mini-creamy-strawberry-chocolate.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
                         <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
                         <td>1,5 кг х <span>300 руб.</span></td>
@@ -103,10 +111,10 @@
                     <div class="filters-sort">
                     <label>Сортировка:
                      <select name="sort-by">
-                      <option value="by-popularity" selected>по популярности</option>
-                      <option value="price-low-to-high">сначала недорогие</option>
-                      <option value="price-high-to-low">сначала дорогие</option>
-                      <option value="by-richness">по жирности</option>
+                        <option value="by-popularity" selected>по популярности</option>
+                        <option value="price-low-to-high">сначала недорогие</option>
+                        <option value="price-high-to-low">сначала дорогие</option>
+                        <option value="by-richness">по жирности</option>
                       </select>
                     </label>
                   </div>
@@ -120,20 +128,47 @@
                   <fieldset class="filters-richness">
                         <legend>Жирность:</legend>
                         <ul>
-                            <li><input class="visually-hidden" type="radio" name="richness" value="fat-free">0&#37;</li>
-                            <li><input class="visually-hidden" type="radio" name="richness" value="before-10%" checked>до 10&#37;</li>
-                            <li><input class="visually-hidden" type="radio" name="richness" value="before-30%">до 30&#37;</li>
-                            <li><input class="visually-hidden" type="radio" name="richness" value="after-30%">выше 30&#37;</li>
+                            <li>
+                            <input class="visually-hidden filter-input-radio" id="filter-fat-free" type="radio" name="richness" value="fat-free">
+                                <label for="filter-fat-free">0&#37;</label>
+                            </li>
+                            <li>
+                            <input class="visually-hidden filter-input-radio" id="filter-before-10" type="radio" name="richness" value="before-10%" checked>
+                                <label for="filter-before-10">до 10&#37;</label>
+                            </li>
+                            <li>
+                            <input class="visually-hidden filter-input-radio" id="filter-before-30" type="radio" name="richness" value="before-30%">
+                                <label for="filter-before-30">до 30&#37;</label>
+                            </li>
+                            <li>
+                            <input class="visually-hidden filter-input-radio" id="filter-after-30" type="radio" name="richness" value="after-30%">
+                                <label for="filter-after-30">выше 30&#37;</label>
+                            </li>
                         </ul>
                   </fieldset>
                   <fieldset class="filters-fillings">
                       <legend>Наполнители:</legend>
                       <ul>
-                          <li><input class="visually-hidden" type="checkbox" name="chocolate" checked>шоколадные</li>
-                          <li><input class="visually-hidden" type="checkbox" name="sugar" checked>сахарные присыпки</li>
-                          <li><input class="visually-hidden" type="checkbox" name="fruits">фрукты</li>
-                          <li><input class="visually-hidden" type="checkbox" name="syrups">сиропы</li>
-                          <li><input class="visually-hidden" type="checkbox" name="jams">джемы</li>
+                          <li>
+                          <input class="visually-hidden filter-input-checkbox" id="filter-chocolate" type="checkbox" name="chocolate" checked>
+                            <label for="filter-chocolate">шоколадные</label>
+                          </li>
+                          <li>
+                          <input class="visually-hidden filter-input-checkbox" id="filter-sugar" type="checkbox" name="sugar" checked>
+                            <label for="filter-sugar">сахарные присыпки</label>
+                          </li>
+                          <li>
+                          <input class="visually-hidden filter-input-checkbox" id="filter-fruits" type="checkbox" name="fruits">
+                            <label for="filter-fruits">фрукты</label>
+                          </li>
+                          <li>
+                          <input class="visually-hidden filter-input-checkbox" id="filter-syrups" type="checkbox" name="syrups">
+                            <label for="filter-syrups">сиропы</label>
+                          </li>
+                          <li>
+                          <input class="visually-hidden filter-input-checkbox" id="filter-jams" type="checkbox" name="jams">
+                              <label for="filter-jams">джемы</label>
+                          </li>
                       </ul>
                   </fieldset>
                   <button class="btn btn-filters">Применить</button>

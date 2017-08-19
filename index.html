@@ -7,10 +7,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-      <header class="main-header">
+    <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo">
-              <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
+            <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
             </a>
             <ul class="main-menu">
                 <li><a href="catalog.html">Каталог</a>
@@ -27,23 +27,22 @@
             </ul>
 
            
-            <div class="user-navigation search"><p>Поиск</p>
-                     <div class="sub-search"> 
-<!--  нужно оборачивать форму в контейнер?-->
-                       <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                        <input type="search" placeholder="Что ищем?">
+            <button class="user-navigation search" type="button">Поиск</button>
+                       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                           <label class="visually-hidden" for="search">Поле поиска по сайту</label>
+                            <input id="search" type="search" placeholder="Что ищем?">
                         </form>
-                    </div>
-            </div>
             
-            <div class="user-navigation login-link">
-                    <p>Вход</p>
+            <div class="user-navigation">
+                    <button class="login-link" type="button">Вход</button>
                             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                             <p>
-                               <input type="text" name="login" placeholder="Электронная почта">
+                                <label class="visually-hidden" for="user-login">Электронная почта</label>
+                               <input id="user-login" type="text" name="login" placeholder="Электронная почта">
                             </p>
                             <p>
-                               <input type="password" name="password" placeholder="Пароль">
+                                <label class="visually-hidden" for="user-password">Пароль</label>
+                               <input id="user-password" type="password" name="password" placeholder="Пароль">
                             </p>
                             <p>
                                 <a class="renew" href="#">Забыли пароль?</a><br>
@@ -53,8 +52,8 @@
                             </form>
             </div>
             
-            <div class="user-navigation cart">
-                <a href="cart.html">Пусто</a>
+            <div class="user-navigation">
+                <a class="cart-link-empty" href="cart.html">Пусто</a>
             </div>
             <p>
                 С 10 до 20, ежедневно
@@ -127,32 +126,26 @@
           
           <article class="from-blog">
               <h2>Новое в нашем блоге</h2>
-              <a href="">10 способов сервировки фруктовых щербетов к столу</a>
+              <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
           </article>
           
           <section class="subscription">
               <h2 class="visually-hidden">Оформить подписку</h2>
               <p>Подпишитесь на нашу рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;</p>
               <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" placeholder="Электронная почта">
+                  <label class="visually-hidden" for="user-email">Электронная почта</label>
+                  <input id="user-email" type="email" name="email" placeholder="Электронная почта">
                   <button class="btn btn-subscription" type="submit">Отправить</button>
               </form>
           </section>
           
           <section class="contacts">
-              <div class="map"></div>
-              
-              <section class="feedback">
-                  <h2 class="visually-hidden">Форма обратной связи</h2>
-                  <b>Мы обязательно вам ответим!</b>
-                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-                  <p><input type="text" name="name" placeholder="Как вас зовут?"></p>
-                  <p><input type="email" name="email" placeholder="Ваша почта для ответа?"></p>
-                  <p><textarea>Напишите что-нибудь...</textarea></p>
-                  <button class="btn" type="submit">Отправить</button>
-                </form>
-                  <span class="feedback-close">x</span>
-              </section>
+              <div class="map">
+                  <h2 class="visually-hidden">Как до нас добраться</h2>
+                    <p>
+                        <img src="img/map-with-pin.png" width="1200" height="430" alt="Офис магазина по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+                    </p>
+              </div>
               
               <h2 class="visually-hidden">Контактная информация</h2>
                 <p>
@@ -167,6 +160,28 @@
                   &#40;с 10 до 20 ежедневно&#41;
                 </p>
                 <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+              
+              <section class="feedback">
+                  <h2 class="visually-hidden">Форма обратной связи</h2>
+                  <b>Мы обязательно вам ответим!</b>
+                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="name">Ваше имя</label>
+                    <input id="name" type="text" name="name" placeholder="Как вас зовут?">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="email">Ваша почта для ответа</label>
+                    <input id="email" type="email" name="email" placeholder="Ваша почта для ответа?">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="feedback-field">Ваш отзыв</label>
+                    <textarea id="feedback-field">Напишите что-нибудь...</textarea>
+                  </p>
+                  <button class="btn" type="submit">Отправить</button>
+                </form>
+                  <button class="feedback-close" type="button">Закрыть</button>
+              </section>
+              
           </section>
       </main>
       
@@ -183,7 +198,7 @@
               <li><a href="#">Наши документы</a></li>
               <li><a href="#">Экологические стандарты</a></li>
           </ul>
-          <img src="img/logo-htmlacademy.svg" alt="Логотип разработчика нашего сайта «HTML Academy»" width="108" height="39">
+          <img src="img/logo-htmlacademy.svg" alt="Логотип разработчика нашего сайта «HTML Academy»" width="122" height="39">
           <p class="footer-copyright">
           Сделано в <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>&copy;2017
           </p>
