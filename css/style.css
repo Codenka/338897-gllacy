@@ -1,73 +1,290 @@
-* {
+html,
+body {
     padding: 0;
     margin: 0;
-    text-decoration: none;
+    
     font-family: "Roboto","Arial", sans-serif;
-    color: #ffffff; 
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    
     background-color: #849d8f;
 }
 
-h1 {
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+
+    background-color: #e84d37;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fefefe;
+    vertical-align: middle;
+    text-decoration: none;
+
+    background-color: #e84d37;
+    border: none;
+    border-radius: 20px;
+}
+
+.catalog-page h1 {
     font-size: 35px;
     line-height: 41px;
-    font-weight: bold;
+    font-weight: 700;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 16px;
+    line-height: 18px;
+    
+    list-style: none;
+}
+
+.main-navigation p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.main-navigation p a {
+    font-size: 22px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.main-navigation .search {
+    background-color: #a1b4a9;
+}
+
+.main-navigation .search-form {
+    background-color: #f8f7f4;
+}
+
+.main-navigation input {
+    font: inherit;
+    
+    background-color: #ffffff;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+}
+
+.main-navigation input:hover {
+    border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.main-navigation input:focus {
+    outline: none;
+    border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.main-navigation input:active {
+    border: 1px solid rdba(178, 178, 178, 0.52);
+}
+
+.user-navigation a {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-form {
+    background-color: #f8f7f4;
+}
+
+.login-form p a {
+    font-size: 13px;
+    line-height: 24px;
+    color: #323232;
+    text-decoration: underline;
+}
+
+.bonus div:first-child {
+    background-image: url("/img/bonus-raspberry.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.bonus div:last-child {
+    background-image: url("/img/bonus-chocolate.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
 }
 
 .bonus-item h3 {
-    font-size: 23px;
-    line-height: 27px;
-    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
 }
 
 .bonus-item p {
-    font-size: 12px;
-    line-height: 14.44px;
-    font-weight: bold;
-}
-
-.features h3 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: medium;
-    color: #323232; 
-}
-
-.features p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
-    font-weight: regular;
-    color: #323232;
+    font-weight: 700;
 }
 
-.from-blog h2 {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: medium;
-    color: #323232;
+.bonus-item a {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.subscription p {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: regular;
-    color: #5a5a5a;
+.product-item {
+    text-align: center;
 }
 
-.contacts p {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: regular;
-    color: #323232;
+.product-item .product-price {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
 }
 
-.feedback b {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: medium;
-    color: #323232;
+.product-item .product-price span {
+    font-size: 30px;
+}
+
+.product-item a {
+    font-weight: 500;
 }
 
 .product-item img {
     border: none;
     border-radius: 50%;
+}
+
+.features {
+    background-color: #eee3cc;
+}
+
+.features h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #323232; 
+}
+
+.features p {
+    color: #323232;
+}
+
+.from-blog {
+    background-color: #ffffff;
+    background-image: url("/img/blog-background.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.from-blog h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #323232;
+}
+
+.from-blog a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #323232;
+}
+
+.subscription {
+    background-color: #f8f7f4;
+    background-image: url("/img/subscription-background.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.subscription p {
+    color: #5a5a5a;
+}
+
+.subscription input {
+    font: inherit;
+    
+    background-color: #ffffff;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+}
+
+.subscription input:hover {
+    border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.contacts .contacts-info {
+    background-color: #fefefe;
+}
+
+.contacts p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.contacts .contacts-address {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.contacts .contacts-phone {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.feedback {
+    background-color: #f8f7f4;
+}
+
+.feedback b {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #323232;
+}
+
+.feedback input,
+.feedback textarea {
+    font: inherit;
+    
+    background-color: #ffffff;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+}
+
+.feedback input:hover,
+.feedback textarea:hover {
+    border: 2px solid rgba(154, 154, 154, 0.52);
+} 
+
+.main-footer ul {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 16px;
+    line-height: 18px;
+    
+    list-style: none;
 }
