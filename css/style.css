@@ -1,7 +1,7 @@
 html,
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     
     font-family: "Roboto","Arial", sans-serif;
     font-size: 16px;
@@ -18,9 +18,8 @@ a {
 
 button {
     font: inherit;
-    
-    text-align: center;
     color: #ffffff;
+    text-align: center;
     vertical-align: middle;
 
     background-color: #e84d37;
@@ -32,10 +31,10 @@ button {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
-    text-align: center;
     color: #fefefe;
-    vertical-align: middle;
+    text-align: center;
     text-decoration: none;
+    vertical-align: middle;
 
     background-color: #e84d37;
     border: none;
@@ -196,6 +195,7 @@ button {
 
 .from-blog h2 {
     font-size: 16px;
+    line-height: 22px;
     font-weight: 500;
     color: #323232;
 }
