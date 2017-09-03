@@ -28,13 +28,16 @@
                 <li class="main-menu-item"><a href="#">Доставка и оплата</a></li>
                 <li class="main-menu-item"><a href="#">О Компании</a></li>
             </ul>
-
+            
+        <div class="user-navigation-wrapper">
             <div class="user-navigation">
                 <button class="search" type="button">Поиск</button>
+                
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                     <label class="visually-hidden" for="search">Поле поиска по сайту</label>
                     <input id="search" type="search" placeholder="Что ищем?">
                 </form>
+                
             </div>
 
             <div class="user-navigation">
@@ -61,12 +64,15 @@
             <div class="user-navigation">
                 <a class="cart-link-empty" href="cart.html">Пусто</a>
             </div>
-
-            <p>
-                С 10 до 20, ежедневно
-                <a href="tel:88124502525">8 812 450-25-25</a>
-            </p>
+        </div>
+        
         </nav>
+
+        <p class="header-contacts">
+            С 10 до 20, ежедневно<br>
+            <a href="tel:88124502525">8 812 450-25-25</a>
+        </p>
+        
     </header>
 
     <main class="container">
@@ -125,36 +131,40 @@
         <section class="features">
             <h2 class="visually-hidden">Преимущества</h2>
             <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
-            <p>
-                Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-            </p>
-            <p>
-                Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
-            </p>
-            <p>
-                Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-            </p>
-            <p>
-                Доставка нашего мороженого до заказчика осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позводяет сохранить превосходный вкус.
-            </p>
+            <div class="features-wrapper">
+                <p>
+                    Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                </p>
+                <p>
+                    Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+                </p>
+                <p>
+                    Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                </p>
+                <p>
+                    Доставка нашего мороженого до заказчика осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позводяет сохранить превосходный вкус.
+                </p>
+            </div>
         </section>
+        
+        <div class="column-wrapper">
+            <article class="from-blog">
+                <h2>Новое в нашем блоге</h2>
+                <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+            </article>
 
-        <article class="from-blog">
-            <h2>Новое в нашем блоге</h2>
-            <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-        </article>
-
-        <section class="subscription">
-            <h2 class="visually-hidden">Оформить подписку</h2>
-            <p>
-                Подпишитесь на нашу рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;
-            </p>
-            <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-                <label class="visually-hidden" for="user-email">Электронная почта</label>
-                <input id="user-email" type="email" name="email" placeholder="Электронная почта">
-                <button class="btn btn-subscription" type="submit">Отправить</button>
-            </form>
-        </section>
+            <section class="subscription">
+                <h2 class="visually-hidden">Оформить подписку</h2>
+                <p>
+                    Подпишитесь на нашу рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно &#61;&#41;
+                </p>
+                <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="visually-hidden" for="user-email">Электронная почта</label>
+                    <input id="user-email" type="email" name="email" placeholder="Электронная почта">
+                    <button class="btn btn-subscription" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
 
         <section class="contacts">
             <div class="map">
@@ -214,10 +224,12 @@
             <li><a href="#">Экологические стандарты</a></li>
         </ul>
 
-        <img src="img/logo-htmlacademy.svg" alt="Логотип разработчика нашего сайта «HTML Academy»" width="122" height="39">
-        <p class="footer-copyright">
-            Сделано в <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>&copy;2017
-        </p>
+        <div class="copyright-wrapper">
+            <img src="img/logo-htmlacademy.svg" alt="Логотип разработчика нашего сайта «HTML Academy»" width="122" height="39">
+            <p class="footer-copyright">
+                Сделано в <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>&copy;2017
+            </p>
+        </div>
     </footer>
 
 </body>

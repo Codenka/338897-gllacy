@@ -1,5 +1,7 @@
 html,
 body {
+    min-width: 1200px;
+    min-height: 2416px;
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Arial", sans-serif;
@@ -10,8 +12,32 @@ body {
     background-color: #849d8f;
 }
 
+.sub-menu,
+.search-form,
+.login-form,
+.feedback,
+.cart-order {
+    /* Временно для сетки */
+    display: none;
+}
+
 a {
     color: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 button {
@@ -37,13 +63,33 @@ button {
     border-radius: 20px;
 }
 
-.catalog-page h1 {
-    font-size: 35px;
-    line-height: 41px;
-    font-weight: 700;
+.main-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 27px;
+    margin-bottom: 535px;
+    margin-left: 27px;
+}
+
+.catalog-page .main-header {
+    margin-bottom: 0;
+}
+
+.main-navigation {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main-header-logo {
+    width: 154px;
+    height: 64px;
 }
 
 .main-menu {
+    display: flex;
+    width: 400px;
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -117,8 +163,15 @@ li.sub-menu-current a {
     background-color: #d07058;
 }
 
+.user-navigation-wrapper {
+    display: flex;
+    width: 295px;
+    margin-left: auto;
+}
+
 .user-navigation {
     background-color: #a1b4a9;
+    border-radius: 15px;
 }
 
 .user-navigation button.search {
@@ -219,16 +272,58 @@ li.sub-menu-current a {
     border-radius: 20px;
 }
 
-.main-navigation p {
+.header-contacts {
+    width: 170px;
+    height: 40px;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
+    text-align: right;
 }
 
-.main-navigation p a {
+.header-contacts a {
     font-size: 22px;
     line-height: 24px;
     text-decoration: none;
+}
+
+.catalog-header-wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+    color: #ffbc9e;
+}
+
+.breadcrumbs-current a:hover,
+.breadcrumbs-current a:focus,
+.breadcrumbs-current a:active {
+    color: #ffffff;
+}
+
+.container {
+    width: 1146px;
+    margin: 0 auto;
+}
+
+.bonus {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .bonus div:first-of-type {
@@ -259,8 +354,20 @@ li.sub-menu-current a {
     font-weight: 700;
 }
 
+.hits {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
 .product-item {
+    width: 267px;
     text-align: center;
+}
+
+.product-item .round-shape {
+    margin: 0;
+    padding: 0;
 }
 
 .product-item .product-price {
@@ -289,7 +396,10 @@ li.sub-menu-current a {
 }
 
 .features {
-    width: 1146px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-bottom: 40px;
     background-color: #eee3cc;
     background-image: url("../img/features-bg.jpg");
     background-position: 0 0;
@@ -304,8 +414,22 @@ li.sub-menu-current a {
     color: #323232;
 }
 
+.features-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+}
+
 .features p {
+    width: 541px;
     color: #323232;
+}
+
+.column-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .from-blog {
@@ -325,6 +449,8 @@ li.sub-menu-current a {
 }
 
 .from-blog a {
+    display: block;
+    width: 290px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
@@ -333,7 +459,6 @@ li.sub-menu-current a {
 
 .subscription {
     width: 560px;
-    background-color: #f8f7f4;
     background-image: url("../img/subscription-bg.svg");
     background-position: top center;
     background-repeat: no-repeat;
@@ -342,6 +467,7 @@ li.sub-menu-current a {
 
 .subscription p {
     color: #5a5a5a;
+    background-color: #f8f7f4;
 }
 
 .subscription input {
@@ -364,7 +490,19 @@ li.sub-menu-current a {
     border: 1px solid rdba(178, 178, 178, 0.52);
 }
 
+.contacts {
+    position: relative;
+}
+
+.map img {
+    margin-right: -27px;
+    margin-left: -27px;
+}
+
 .contacts-info {
+    position: absolute;
+    top: 60px;
+    right: 27px;
     width: 305px;
     background-color: #fefefe;
     border-radius: 15px;
@@ -427,22 +565,18 @@ li.sub-menu-current a {
     border: 1px solid rdba(178, 178, 178, 0.52);
 }
 
-.breadcrumbs {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.catalog-page h1 {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
 }
 
-.breadcrumbs a:hover,
-.breadcrumbs a:focus,
-.breadcrumbs a:active {
-    color: #ffbc9e;
-}
-
-.breadcrumbs-current a:hover,
-.breadcrumbs-current a:focus,
-.breadcrumbs-current a:active {
-    color: #ffffff;
+.filters-form {
+    display: flex;
+    flex-direction:;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 880px;
 }
 
 .filters-sort,
@@ -458,10 +592,11 @@ li.sub-menu-current a {
 }
 
 .filters fieldset {
-  border: none;
+    border: none;
 }
 
 .filters ul {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -477,14 +612,22 @@ li.sub-menu-current a {
     border: 2px solid #ffffff;
 }
 
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
 .pagination-list {
+    display: flex;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .pagination-item {
-    display: inline-block;
     width: 26px;
     height: 26px;
     text-align: center;
@@ -531,7 +674,16 @@ li.sub-menu-current a {
     color: #323232;
 }
 
-.main-footer ul {
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    height: 103px;
+    margin-right: 27px;
+    margin-left: 27px;
+}
+
+.footer-social {
+    display: flex;
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -540,5 +692,13 @@ li.sub-menu-current a {
 }
 
 .footer-navigation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
     text-align: center;
+    list-style: none;
 }
