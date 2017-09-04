@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
@@ -8,9 +7,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
-    <header class="main-header">
+    <header class="main-header container">
         <nav class="main-navigation">
             <a class="main-header-logo">
                 <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
@@ -27,22 +25,17 @@
                 </li>
                 <li class="main-menu-item"><a href="#">Доставка и оплата</a></li>
                 <li class="main-menu-item"><a href="#">О Компании</a></li>
-            </ul>
-            
+            </ul>   
         <div class="user-navigation-wrapper">
             <div class="user-navigation">
-                <button class="search" type="button">Поиск</button>
-                
+                <button class="search" type="button"><span class="visually-hidden">Поиск</span></button>
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                     <label class="visually-hidden" for="search">Поле поиска по сайту</label>
                     <input id="search" type="search" placeholder="Что ищем?">
-                </form>
-                
+                </form>  
             </div>
-
             <div class="user-navigation">
                 <a class="login-link" href="#">Вход</a>
-
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                     <p>
                         <label class="visually-hidden" for="user-login">Электронная почта</label>
@@ -58,30 +51,21 @@
                     </p>
                     <button class="btn" type="submit">Войти</button>
                 </form>
-
             </div>
-
             <div class="user-navigation">
                 <a class="cart-link-empty" href="cart.html">Пусто</a>
             </div>
         </div>
-        
         </nav>
-
         <p class="header-contacts">
-            С 10 до 20, ежедневно<br>
+            С 10 до 20, ежедневно
             <a href="tel:88124502525">8 812 450-25-25</a>
         </p>
-        
     </header>
-
     <main class="container">
-
         <h1 class="visually-hidden">Магазин по продаже мороженого «Глейси»</h1>
-
         <section class="promo">
         </section>
-
         <section class="bonus">
             <h2 class="visually-hidden">Бонусы</h2>
             <div class="bonus-item">
@@ -95,7 +79,6 @@
                 <a class="btn btn-bonus" href="#">Хочу шоколадки!</a>
             </div>
         </section>
-
         <section class="hits">
             <h2 class="visually-hidden">Популярные товары</h2>
             <article class="product-item product-item-hits">
@@ -127,7 +110,6 @@
                 <a class="product-description" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </article>
         </section>
-
         <section class="features">
             <h2 class="visually-hidden">Преимущества</h2>
             <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
@@ -136,23 +118,21 @@
                     Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
                 </p>
                 <p>
-                    Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+                    Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
                 </p>
                 <p>
-                    Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                    Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
                 </p>
                 <p>
                     Доставка нашего мороженого до заказчика осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позводяет сохранить превосходный вкус.
                 </p>
             </div>
         </section>
-        
         <div class="column-wrapper">
             <article class="from-blog">
                 <h2>Новое в нашем блоге</h2>
                 <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
             </article>
-
             <section class="subscription">
                 <h2 class="visually-hidden">Оформить подписку</h2>
                 <p>
@@ -165,65 +145,59 @@
                 </form>
             </section>
         </div>
-
-        <section class="contacts">
-            <div class="map">
-                <h2 class="visually-hidden">Как до нас добраться</h2>
-                <p>
-                    <img src="img/map-with-pin.png" width="1200" height="430" alt="Офис магазина по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-                </p>
-            </div>
-
-            <div class="contacts-info">
-                <h2 class="visually-hidden">Контактная информация</h2>
-                <p>
-                    Адрес главного офиса и офлайн магазина: <span class="contacts-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-                </p>
-                <p>
-                    Для заказов по телефону:
-                    <a class="contacts-phone" href="tel:88124502525">8 812 450-25-25</a> &#40;с 10 до 20 ежедневно&#41;
-                </p>
-                <a class="btn btn-feedback" href="#">Форма обратной связи</a>
-            </div>
-
-            <section class="feedback">
-                <h2 class="visually-hidden">Форма обратной связи</h2>
-                <b>Мы обязательно вам ответим!</b>
-                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-                    <p>
-                        <label class="visually-hidden" for="name">Ваше имя</label>
-                        <input id="name" type="text" name="name" placeholder="Как вас зовут?">
-                    </p>
-                    <p>
-                        <label class="visually-hidden" for="email">Ваша почта для ответа</label>
-                        <input id="email" type="email" name="email" placeholder="Ваша почта для ответа?">
-                    </p>
-                    <p>
-                        <label class="visually-hidden" for="feedback-field">Ваш отзыв</label>
-                        <textarea id="feedback-field">Напишите что-нибудь...</textarea>
-                    </p>
-                    <button class="btn" type="submit">Отправить</button>
-                </form>
-                <button class="feedback-close" type="button">Закрыть</button>
-            </section>
-
-        </section>
     </main>
-
-    <footer class="main-footer">
+    <section class="contacts">
+        <div class="map">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <p>
+                <img src="img/map-with-pin.png" width="1200" height="430" alt="Офис магазина по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            </p>
+        </div>
+        <div class="contacts-info">
+            <h2 class="visually-hidden">Контактная информация</h2>
+            <p>
+                Адрес главного офиса и офлайн магазина: <span class="contacts-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+            </p>
+            <p>
+                Для заказов по телефону:
+                <a class="contacts-phone" href="tel:88124502525">8 812 450-25-25</a> &#40;с 10 до 20 ежедневно&#41;
+            </p>
+            <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+        </div>
+        <section class="feedback">
+            <h2 class="visually-hidden">Форма обратной связи</h2>
+            <b>Мы обязательно вам ответим!</b>
+            <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                    <label class="visually-hidden" for="name">Ваше имя</label>
+                    <input id="name" type="text" name="name" placeholder="Как вас зовут?">
+                </p>
+                <p>
+                    <label class="visually-hidden" for="email">Ваша почта для ответа</label>
+                    <input id="email" type="email" name="email" placeholder="Ваша почта для ответа?">
+                </p>
+                <p>
+                    <label class="visually-hidden" for="feedback-field">Ваш отзыв</label>
+                    <textarea id="feedback-field">Напишите что-нибудь...</textarea>
+                </p>
+                <button class="btn" type="submit">Отправить</button>
+            </form>
+            <button class="feedback-close" type="button">Закрыть</button>
+        </section>
+    </section>
+    <footer class="main-footer container">
         <ul class="footer-social">
-            <li><a class="btn-social" href="#" target="_blank">Twitter</a></li>
-            <li><a class="btn-social" href="#" target="_blank">Instagram</a></li>
-            <li><a class="btn-social" href="#" target="_blank">Facebook</a></li>
-            <li><a class="btn-social" href="#" target="_blank">Vkontakte</a></li>
+            <li><a class="btn-social" href="#" target="_blank"><span class="visually-hidden">Twitter</span></a></li>
+            <li><a class="btn-social" href="#" target="_blank"><span class="visually-hidden">Instagram</span></a></li>
+            <li><a class="btn-social" href="#" target="_blank"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="btn-social" href="#" target="_blank"><span class="visually-hidden">Vkontakte</span></a></li>
         </ul>
         <ul class="footer-navigation">
             <li><a href="#">Для поставщиков</a></li>
-            <li><a href="#">О производстве</a></li>
             <li><a href="#">Наши документы</a></li>
+            <li><a href="#">О производстве</a></li>
             <li><a href="#">Экологические стандарты</a></li>
         </ul>
-
         <div class="copyright-wrapper">
             <img src="img/logo-htmlacademy.svg" alt="Логотип разработчика нашего сайта «HTML Academy»" width="122" height="39">
             <p class="footer-copyright">
@@ -231,7 +205,5 @@
             </p>
         </div>
     </footer>
-
 </body>
-
 </html>

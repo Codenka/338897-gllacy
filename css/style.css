@@ -1,7 +1,6 @@
 html,
 body {
     min-width: 1200px;
-    min-height: 2416px;
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Arial", sans-serif;
@@ -63,13 +62,16 @@ button {
     border-radius: 20px;
 }
 
+.container {
+    width: 1146px;
+    margin: 0 auto;
+}
+
 .main-header {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    margin-right: 27px;
     margin-bottom: 535px;
-    margin-left: 27px;
+    padding-top: 10px;
 }
 
 .catalog-page .main-header {
@@ -89,25 +91,35 @@ button {
 
 .main-menu {
     display: flex;
+    flex-wrap: wrap;
     width: 400px;
     margin: 0;
     padding: 0;
+    padding-top: 13px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.main-menu a {
+    display: block;
+    padding: 7px 15px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-    list-style: none;
+    vertical-align: middle;
 }
 
 li.main-menu-item>a:hover,
 li.main-menu-item>a:focus {
+    outline: none;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
     color: #333333;
     text-decoration: none;
     background-color: #f7f6f3;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 1px #ffffff;
 }
 
 li.main-menu-item>a:active {
@@ -117,7 +129,7 @@ li.main-menu-item>a:active {
     color: #333333;
     text-decoration: none;
     background-color: #ededed;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: inset 0 1px 2px 0 #696969;
 }
 
@@ -127,7 +139,7 @@ li.main-menu-current>a {
     font-weight: 700;
     text-decoration: none;
     background-color: #d07058;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .sub-menu {
@@ -169,32 +181,29 @@ li.sub-menu-current a {
     margin-left: auto;
 }
 
-.user-navigation {
-    background-color: #a1b4a9;
-    border-radius: 15px;
-}
-
-.user-navigation button.search {
+.user-navigation .search {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-top: 13px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
     text-decoration: none;
     background-color: #a1b4a9;
+    background-image: url("../img/icon-search.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
-.user-navigation a {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.user-navigation:hover,
-.user-navigation:focus,
-.user-navigation button.search:hover,
-.user-navigation button.search:focus {
-    color: #323232;
+.user-navigation .search:hover,
+.user-navigation .search:focus {
+    outline: none;
     background-color: #f8f7f4;
+    background-image: url("../img/icon-search-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .user-navigation .search-form {
@@ -219,9 +228,98 @@ li.sub-menu-current a {
 }
 
 .user-navigation input:active {
-    border: 1px solid rdba(178, 178, 178, 0.52);
+    border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
+.user-navigation .login-link {
+    position: relative;
+    display: block;
+    width: 49px;
+    margin-top: 13px;
+    margin-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 43px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #a1b4a9;
+    border-radius: 20px;
+}
+
+.user-navigation .login-link::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-login.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user-navigation .cart-link-empty,
+.user-navigation .cart-link-order {
+    position: relative;
+    display: block;
+    width: 72px;
+    margin-top: 13px;
+    margin-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 45px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #a1b4a9;
+    border-radius: 20px;
+}
+
+.user-navigation .cart-link-empty::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-cart-index.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user-navigation .cart-link-order::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-cart-catalog.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user-navigation .login-link:hover,
+.user-navigation .login-link:focus {
+    outline: none;
+    color: #323232;
+    background-color: #f8f7f4;
+}
+
+.user-navigation .login-link:hover::before,
+.user-navigation .login-link:focus::before {
+    background-image: url("../img/icon-login-hover.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*
 .login-form a:hover,
 .login-form a:focus,
 .login-form a:active,
@@ -230,11 +328,14 @@ li.sub-menu-current a {
 .cart-order td a:active {
     color: #e84d37;
 }
+*/
 
+/*
 .user-navigation .login-form,
 .user-navigation .cart-order {
     background-color: #f8f7f4;
 }
+*/
 
 .user-navigation .renew,
 .user-navigation .registration {
@@ -285,6 +386,7 @@ li.sub-menu-current a {
 }
 
 .header-contacts a {
+    display: block;
     font-size: 22px;
     line-height: 24px;
     text-decoration: none;
@@ -313,11 +415,6 @@ li.sub-menu-current a {
 .breadcrumbs-current a:focus,
 .breadcrumbs-current a:active {
     color: #ffffff;
-}
-
-.container {
-    width: 1146px;
-    margin: 0 auto;
 }
 
 .bonus {
@@ -395,6 +492,10 @@ li.sub-menu-current a {
     color: #ffbc9e;
 }
 
+.product-item .btn-preview {
+    display: block;
+}
+
 .features {
     display: flex;
     flex-direction: column;
@@ -416,13 +517,11 @@ li.sub-menu-current a {
 
 .features-wrapper {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    height: 200px;
 }
 
 .features p {
-    width: 541px;
+    width: 560px;
     color: #323232;
 }
 
@@ -459,15 +558,15 @@ li.sub-menu-current a {
 
 .subscription {
     width: 560px;
-    background-image: url("../img/subscription-bg.svg");
-    background-position: top center;
-    background-repeat: no-repeat;
+    background-color: #f8f7f4;
+    background-image: url("../img/subscription-bg.jpg");
+    background-position: center, top center;
+    background-repeat: repeat;
     border-radius: 15px;
 }
 
 .subscription p {
     color: #5a5a5a;
-    background-color: #f8f7f4;
 }
 
 .subscription input {
@@ -478,7 +577,10 @@ li.sub-menu-current a {
 }
 
 .subscription input:hover {
-    border: 2px solid rgba(154, 154, 154, 0.52);
+    border: 1px solid rgba(154, 154, 154, 0.52);
+    box-shadow: 
+        1px 1px 0 0 rgba(154, 154, 154, 0.52),
+        -1px -1px 0 0 rgba(154, 154, 154, 0.52);
 }
 
 .subscription input:focus {
@@ -487,16 +589,13 @@ li.sub-menu-current a {
 }
 
 .subscription input:active {
-    border: 1px solid rdba(178, 178, 178, 0.52);
+    border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
 .contacts {
     position: relative;
-}
-
-.map img {
-    margin-right: -27px;
-    margin-left: -27px;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .contacts-info {
@@ -508,7 +607,8 @@ li.sub-menu-current a {
     border-radius: 15px;
 }
 
-.contacts p {
+.contacts-info p {
+    width: 255px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -516,12 +616,14 @@ li.sub-menu-current a {
 }
 
 .contacts-address {
+    display: block;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
 }
 
 .contacts-phone {
+    display: block;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
@@ -562,7 +664,7 @@ li.sub-menu-current a {
 
 .feedback input:active,
 .feedback textarea:active {
-    border: 1px solid rdba(178, 178, 178, 0.52);
+    border: 1px solid rgba(178, 178, 178, 0.52);
 }
 
 .catalog-page h1 {
@@ -678,8 +780,6 @@ li.sub-menu-current a {
     display: flex;
     justify-content: space-between;
     height: 103px;
-    margin-right: 27px;
-    margin-left: 27px;
 }
 
 .footer-social {
@@ -693,8 +793,8 @@ li.sub-menu-current a {
 
 .footer-navigation {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    width: 350px;
     margin: 0;
     padding: 0;
     font-size: 16px;
