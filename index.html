@@ -11,63 +11,65 @@
    <input type="radio" id="btn-1" name="toggle" checked>
    <input type="radio" id="btn-2" name="toggle">
    <input type="radio" id="btn-3" name="toggle">
-     <div class="site-wrapper">
-      <div class="content-wrapper">
-        <header class="main-header container">
-            <nav class="main-navigation">
-                <a class="main-header-logo">
-                    <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
-                </a>
-                <ul class="main-menu">
-                    <li class="main-menu-item"><a href="#">Каталог</a>
-                        <ul class="sub-menu">
-                            <li><a class="brand-new" href="#">Новинки</a></li>
-                            <li><a href="catalog.html">Сливочные</a></li>
-                            <li><a href="#">Щербеты</a></li>
-                            <li><a href="#">Фруктовый лед</a></li>
-                            <li><a href="#">Мелорин</a></li>
-                        </ul>
-                    </li>
-                    <li class="main-menu-item"><a href="#">Доставка и оплата</a></li>
-                    <li class="main-menu-item"><a href="#">О Компании</a></li>
-                </ul>   
-            <div class="user-navigation-wrapper">
-                <div class="user-navigation">
-                    <button class="search" type="button"><span class="visually-hidden">Поиск</span></button>
-                    <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                        <label class="visually-hidden" for="search">Поле поиска по сайту</label>
-                        <input id="search" type="search" placeholder="Что ищем?">
-                    </form>  
-                </div>
-                <div class="user-navigation">
-                    <a class="login-link" href="#">Вход</a>
-                    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                        <p>
-                            <label class="visually-hidden" for="user-login">Электронная почта</label>
-                            <input id="user-login" type="text" name="login" placeholder="Электронная почта">
-                        </p>
-                        <p>
-                            <label class="visually-hidden" for="user-password">Пароль</label>
-                            <input id="user-password" type="password" name="password" placeholder="Пароль">
-                        </p>
-                        <button class="btn btn-login" type="submit">Войти</button>
-                        <p class="login-help">
-                            <a class="renew" href="#">Забыли пароль?</a>
-                            <a class="registration" href="#">Новая регистрация</a>
-                        </p>
-                    </form>
-                </div>
-                <div class="user-navigation">
-                    <a class="cart-link-empty" href="cart.html">Пусто</a>
-                </div>
-            </div>
-            </nav>
-            <p class="header-contacts">
-                С 10 до 20, ежедневно
-                <a href="tel:88124502525">8 812 450-25-25</a>
-            </p>
-        </header>
-        <main class="container">
+    <div class="site-wrapper">
+        <div class="content-wrapper">
+            <header class="main-header container">
+                <nav class="main-navigation">
+                    <a class="main-header-logo">
+                        <img src="img/logo.svg" alt="Логотип магазина мороженого «Глейси»" width="154" height="64">
+                    </a>
+                    <ul class="main-menu">
+                        <li class="main-menu-item"><a href="#">Каталог</a>
+                            <ul class="sub-menu">
+                                <li class="brand-new"><a href="#">Новинки</a></li>
+                                <li><a href="catalog.html">Сливочные</a></li>
+                                <li><a href="#">Щербеты</a></li>
+                                <li><a href="#">Фруктовый лед</a></li>
+                                <li><a href="#">Мелорин</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu-item"><a href="#">Доставка и оплата</a></li>
+                        <li class="main-menu-item"><a href="#">О Компании</a></li>
+                    </ul>   
+                    <div class="user-navigation-wrapper">
+                        <div class="user-navigation">
+                            <button class="search" type="button"><span class="visually-hidden">Поиск</span></button>
+                            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                                <label class="visually-hidden" for="search">Поле поиска по сайту</label>
+                                <input id="search" type="search" placeholder="Что ищем?">
+                            </form>  
+                        </div>
+                        <div class="user-navigation">
+                            <a class="login-link" href="#">Вход</a>
+                            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                                <p>
+                                    <label class="visually-hidden" for="user-login">Электронная почта</label>
+                                    <input id="user-login" type="text" name="login" placeholder="Электронная почта">
+                                    <span class="input-label">Электронная почта</span>
+                                </p>
+                                <p>
+                                    <label class="visually-hidden" for="user-password">Пароль</label>
+                                    <input id="user-password" type="password" name="password" placeholder="Пароль">
+                                    <span class="input-label">Пароль</span>
+                                </p>
+                                    <button class="btn btn-login" type="submit">Войти</button>
+                                    <p class="login-help">
+                                        <a class="renew" href="#">Забыли пароль?</a>
+                                        <a class="registration" href="#">Новая регистрация</a>
+                                    </p>
+                            </form>
+                        </div>
+                        <div class="user-navigation">
+                            <a class="cart-link-empty" href="cart.html">Пусто</a>
+                        </div>
+                    </div>
+                </nav>
+                <p class="header-contacts">
+                    С 10 до 20, ежедневно
+                    <a href="tel:88124502525">8 812 450-25-25</a>
+                </p>
+            </header>
+            <main class="container">
             <h1 class="visually-hidden">Магазин по продаже мороженого «Глейси»</h1>
             <section class="promo-slider">
                 <h2 class="visually-hidden">Промо-акции нашего магазина</h2>
@@ -93,12 +95,16 @@
                 <h2 class="visually-hidden">Бонусы</h2>
                 <div class="bonus-item">
                     <h3>Малинка даром!</h3>
-                    <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                    <p>
+                        При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+                    </p>
                     <a class="btn btn-bonus" href="#">Хочу варенье!</a>
                 </div>
                 <div class="bonus-item">
                     <h3>Шоколадки даром!</h3>
-                    <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                    <p>
+                        При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+                    </p>
                     <a class="btn btn-bonus" href="#">Хочу шоколадки!</a>
                 </div>
             </section>
@@ -169,45 +175,27 @@
                 </section>
             </div>
         </main>
-        <section class="contacts">
+            <section class="contacts">
             <div class="map">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.301856430468!2d30.328125632293705!3d59.93793430034172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sru!4v1504854177634" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.301856430468!2d30.328125632293705!3d59.93793430034172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sru!4v1504854177634" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
                 <div>
                    <img src="img/map-with-pin.png" width="1200" height="430" alt="Офис магазина по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
                 </div>
             </div>
-            <div class="contacts-info">
-                <h2 class="visually-hidden">Контактная информация</h2>
-                <span class="info info-address">Адрес главного офиса и офлайн магазина:</span>
-                <span class="contacts-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-                <span class="info info-phone">Для заказов по телефону:</span>
-                <a class="contacts-phone" href="tel:88124502525">8 812 450-25-25</a> <span class="info info-hours">&#40;с 10 до 20 ежедневно&#41;
-                </span>
-                <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+            <div class="contacts-info-wrapper container">
+                <div class="contacts-info">
+                    <h2 class="visually-hidden">Контактная информация</h2>
+                    <span class="info info-address">Адрес главного офиса и офлайн магазина:</span>
+                    <span class="contacts-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+                    <span class="info info-phone">Для заказов по телефону:</span>
+                    <a class="contacts-phone" href="tel:88124502525">8 812 450-25-25</a> <span class="info info-hours">&#40;с 10 до 20 ежедневно&#41;
+                    </span>
+                    <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+                </div>
             </div>
-            <section class="feedback">
-                <h2 class="visually-hidden">Форма обратной связи</h2>
-                <b>Мы обязательно вам ответим!</b>
-                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-                    <p>
-                        <label class="visually-hidden" for="name">Ваше имя</label>
-                        <input id="name" type="text" name="name" placeholder="Как вас зовут?">
-                    </p>
-                    <p>
-                        <label class="visually-hidden" for="email">Ваша почта для ответа</label>
-                        <input id="email" type="email" name="email" placeholder="Ваша почта для ответа?">
-                    </p>
-                    <p>
-                        <label class="visually-hidden" for="feedback-field">Ваш отзыв</label>
-                        <textarea id="feedback-field">Напишите что-нибудь...</textarea>
-                    </p>
-                    <button class="btn" type="submit">Отправить</button>
-                </form>
-                <button class="feedback-close" type="button">Закрыть</button>
-            </section>
         </section>
-        <footer class="main-footer container">
+            <footer class="main-footer container">
             <ul class="footer-social">
                 <li><a class="btn-social" href="#" target="_blank"><span class="visually-hidden">Twitter</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -259,8 +247,33 @@
                 </p>
             </div>
         </footer>
-       
-     </div>
+            <section class="modal-feedback">
+                <h2 class="visually-hidden">Форма обратной связи</h2>
+                <b>Мы обязательно вам ответим!</b>
+                <button class="feedback-close" type="button">Закрыть</button>
+                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                    <div>
+                        <input id="name" type="text" name="name">
+                        <div class="label-box">
+                            <label class="label-input" for="name">Как вас зовут?</label>
+                        </div>
+                    </div>
+                    <div>
+                        <input id="email" type="email" name="email">
+                        <div class="label-box">
+                            <label class="label-input" for="email">Ваша почта для ответа?</label>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea id="feedback-field" name="feedback-text" rows="7" cols="30"></textarea>
+                        <div class="label-box">
+                            <label class="label-textarea" for="feedback-field">Напишите что-нибудь...</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-modal" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
     </div>
 </body>
 </html>

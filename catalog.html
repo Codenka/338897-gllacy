@@ -16,7 +16,7 @@
             <ul class="main-menu">
                 <li class="main-menu-item main-menu-current"><a href="#">Каталог</a>
                     <ul class="sub-menu">
-                        <li><a class="brand-new" href="#">Новинки</a></li>
+                        <li class="brand-new"><a href="#">Новинки</a></li>
                         <li class="sub-menu-current"><a href="#">Сливочные</a></li>
                         <li><a href="#">Щербеты</a></li>
                         <li><a href="#">Фруктовый лед</a></li>
@@ -55,28 +55,30 @@
                 <div class="user-navigation">
                     <a class="cart-link-order" href="cart.html">2 товара</a>
                     <section class="cart-order">
-                        <table>
-                            <caption class="visually-hidden">Корзина с товарами</caption>
+                        <h3 class="visually-hidden">Корзина с товарами</h3>
+                        <table class="cart-table">
                             <tbody>
-                                <tr>
-                                    <td><button class="visually-hidden" type="button">Удалить</button></td>
-                                    <td><img src="img/mini-creamy-orange.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-                                    <td><a href="#">Пломбир с апельсиновым джемом</a></td>
-                                    <td>1,5 кг х <span>200 руб.</span></td>
-                                    <td>300 руб.</td>
+                                <tr class="cart-table-row">
+                                    <td class="cart-table-cell-col1"><button class="btn-cart-remove" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                                    <td class="cart-table-cell-col2"><img src="img/mini-creamy-orange.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                                    <td class="cart-table-cell-col3"><a href="#">Пломбир с апельсиновым джемом</a></td>
+                                    <td class="cart-table-cell-col4">1,5 кг</td>
+                                    <td class="cart-table-cell-col5">х 200 руб.</td>
+                                    <td class="cart-table-cell-col6">300 руб.</td>
                                 </tr>
-                                <tr>
-                                    <td><button class="visually-hidden" type="button">Удалить</button></td>
-                                    <td><img src="img/mini-creamy-strawberry-chocolate.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
-                                    <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                                    <td>1,5 кг х <span>300 руб.</span></td>
-                                    <td>450 руб.</td>
+                                <tr class="cart-table-row">
+                                    <td class="cart-table-cell-col1"><button class="btn-cart-remove" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                                    <td class="cart-table-cell-col2"><img src="img/mini-creamy-strawberry-chocolate.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+                                    <td class="cart-table-cell-col3"><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                                    <td class="cart-table-cell-col4">1,5 кг</td>
+                                    <td class="cart-table-cell-col5"> х 300 руб.</td>
+                                    <td class="cart-table-cell-col6">450 руб.</td>
                                 </tr>
                             </tbody>
                             <tfoot>
-                                <tr>
-                                    <td colspan="4">Итого:</td>
-                                    <td>750 руб.</td>
+                                <tr class="cart-table-row">
+                                    <td class="cart-table-cell-total" colspan="5">Итого:</td>
+                                    <td class="cart-table-cell-sum">750 руб.</td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -102,39 +104,55 @@
         <section class="filters">
             <h2 class="visually-hidden">Фильтры товаров</h2>
             <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
-                <div class="filters-sort">
-                    <label>Сортировка:
+                <fieldset class="filters-sort">
+                    <legend>Сортировка:</legend>
                     <select class="filters-select-sort" name="sort-by">
                         <option value="by-popularity" selected>по популярности</option>
                         <option value="price-low-to-high">сначала недорогие</option>
                         <option value="price-high-to-low">сначала дорогие</option>
                         <option value="by-richness">по жирности</option>
                     </select>
-                </label>
-                </div>
-                <div class="filters-price">
-                    <label><span>Цена: 100 руб. - 500 руб.</span>
-                    <input class="visually-hidden" type="range" min="100" max="500">
-                    </label>
-                </div>
+                </fieldset>
+                <fieldset class="filters-price">
+                    <legend>Цена: 100 руб. — 500 руб.</legend>
+                    <div class="price-range">
+                        <div class="price-slide"></div>
+                        <div class="price-pointer">
+                            <div class="pointer-left"></div>
+                            <div class="pointer-right"></div>
+                        </div>
+                    </div>
+                </fieldset>
                 <fieldset class="filters-richness">
                     <legend>Жирность:</legend>
                     <ul>
                         <li>
-                            <input class="visually-hidden filter-input-radio" id="filter-fat-free" type="radio" name="richness" value="fat-free">
-                            <label for="filter-fat-free">0&#37;</label>
+                            <label class="filters-radio" for="filter-fat-free">
+                                <input class="visually-hidden filter-input-radio" id="filter-fat-free" type="radio" name="richness" value="fat-free">
+                                <span class="radio-indicator"></span>
+                                0&#37;
+                            </label>
                         </li>
                         <li>
-                            <input class="visually-hidden filter-input-radio" id="filter-before-10" type="radio" name="richness" value="before-10%" checked>
-                            <label for="filter-before-10">до 10&#37;</label>
+                            <label class="filters-radio" for="filter-before-10">
+                                <input class="visually-hidden filter-input-radio" id="filter-before-10" type="radio" name="richness" value="before-10%" checked>
+                                <span class="radio-indicator"></span>
+                                до 10&#37;
+                            </label>
                         </li>
                         <li>
-                            <input class="visually-hidden filter-input-radio" id="filter-before-30" type="radio" name="richness" value="before-30%">
-                            <label for="filter-before-30">до 30&#37;</label>
+                           <label  class="filters-radio" for="filter-before-30">
+                                <input class="visually-hidden filter-input-radio" id="filter-before-30" type="radio" name="richness" value="before-30%">
+                                <span class="radio-indicator"></span>
+                                до 30&#37;
+                            </label>
                         </li>
                         <li>
-                            <input class="visually-hidden filter-input-radio" id="filter-after-30" type="radio" name="richness" value="after-30%">
-                            <label for="filter-after-30">выше 30&#37;</label>
+                           <label class="filters-radio" for="filter-after-30">
+                                <input class="visually-hidden filter-input-radio" id="filter-after-30" type="radio" name="richness" value="after-30%">
+                                <span class="radio-indicator"></span>
+                                выше 30&#37;
+                            </label>
                         </li>
                     </ul>
                 </fieldset>
@@ -178,7 +196,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <button class="btn btn-filters" type="submit">Применить</button>
+                <button class="btn-filters" type="submit">Применить</button>
             </form>
         </section>
         <section class="product">
@@ -305,13 +323,13 @@
             </article>
         </section>
         <ul class="pagination-list">
-            <li class="pagination-item"><a href="#" disabled>&#8249;</a></li>
-            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item disabled"><a><img src="img/icon-pagination.svg" alt="кнопка назад" width="8" height="12"></a></li>
+            <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
             <li class="pagination-item"><a href="#">4</a></li>
             <li class="pagination-item"><a href="#">5</a></li>
-            <li class="pagination-item"><a href="#">&#8250;</a></li>
+            <li class="pagination-item"><a href="#"><img src="img/icon-pagination.svg" alt="кнопка назад" width="8" height="12"></a></li>
         </ul>
     </main>
     <footer class="main-footer container">
