@@ -35,28 +35,32 @@
                         <div class="user-navigation">
                             <button class="search" type="button"><span class="visually-hidden">Поиск</span></button>
                             <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                                <label class="visually-hidden" for="search">Поле поиска по сайту</label>
-                                <input id="search" type="search" placeholder="Что ищем?">
+                                <input id="search" type="search">
+                                <div class="label-box">
+                                    <label class="label-input label-input-search" for="search">Что ищем?</label>
+                                </div>
                             </form>  
                         </div>
                         <div class="user-navigation">
                             <a class="login-link" href="#">Вход</a>
                             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                                <p>
-                                    <label class="visually-hidden" for="user-login">Электронная почта</label>
-                                    <input id="user-login" type="text" name="login" placeholder="Электронная почта">
-                                    <span class="input-label">Электронная почта</span>
+                                <div>
+                                    <input id="user-login" type="email" name="login">
+                                    <div class="label-box">
+                                        <label class="label-input" for="user-login">Электронная почта</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="user-password" type="password" name="password">
+                                    <div class="label-box">
+                                        <label class="label-input" for="user-password">Пароль</label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-login" type="submit">Войти</button>
+                                <p class="login-help">
+                                    <a class="renew" href="#">Забыли пароль?</a>
+                                    <a class="registration" href="#">Новая регистрация</a>
                                 </p>
-                                <p>
-                                    <label class="visually-hidden" for="user-password">Пароль</label>
-                                    <input id="user-password" type="password" name="password" placeholder="Пароль">
-                                    <span class="input-label">Пароль</span>
-                                </p>
-                                    <button class="btn btn-login" type="submit">Войти</button>
-                                    <p class="login-help">
-                                        <a class="renew" href="#">Забыли пароль?</a>
-                                        <a class="registration" href="#">Новая регистрация</a>
-                                    </p>
                             </form>
                         </div>
                         <div class="user-navigation">
@@ -252,7 +256,7 @@
                 <b>Мы обязательно вам ответим!</b>
                 <button class="feedback-close" type="button">Закрыть</button>
                 <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-                    <div>
+                   <div>
                         <input id="name" type="text" name="name">
                         <div class="label-box">
                             <label class="label-input" for="name">Как вас зовут?</label>
@@ -265,10 +269,10 @@
                         </div>
                     </div>
                     <div>
-                        <textarea id="feedback-field" name="feedback-text" rows="7" cols="30"></textarea>
-                        <div class="label-box">
-                            <label class="label-textarea" for="feedback-field">Напишите что-нибудь...</label>
-                        </div>
+                    <textarea id="feedback-field" name="feedback-text" rows="7" cols="30"></textarea>
+                    <div class="label-box">
+                        <label class="label-input label-textarea" for="feedback-field">Напишите что-нибудь...</label>
+                    </div>
                     </div>
                     <button class="btn btn-modal" type="submit">Отправить</button>
                 </form>

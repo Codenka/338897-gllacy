@@ -320,6 +320,62 @@ li.main-menu-current>a {
     border-radius: 5px;
 }
 
+.label-box {
+    position: relative;
+}
+
+.label-input {
+    position: absolute;
+    top: -34px;
+    left: 14px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #999999;
+    transition: 2s ease all;
+    pointer-events: none;
+}
+
+.label-input-search {
+    top: -56px;
+    left: 30px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.label-textarea {
+    top: -152px;
+    left: 14px;
+}
+
+input[type="search"]:focus ~ .label-box .label-input,
+input[type="text"]:focus ~ .label-box .label-input,
+input[type="email"]:focus ~ .label-box .label-input,
+input[type="password"]:focus ~ .label-box .label-input,
+textarea:focus ~ .label-box .label-textarea {
+    font-size: 11px;
+    line-height: 13px;
+    color: #5b9ddf;
+    transform: translateY(-24px);
+}
+
+/*
+input[type="search"]:valid ~ .label-box .label-input {
+    font-size: 11px;
+    line-height: 13px;
+    color: #999999;
+    transform: translateY(-24px);
+}
+
+.modal-feedback input:valid ~ .label-box .label-input,
+.modal-feedback textarea:valid ~ .label-box .label-textarea{
+    font-size: 11px;
+    line-height: 13px;
+    color: #999999;
+    transform: translateY(-24px);
+}
+*/
+
 .user-navigation input:hover {
     outline: none;
     border: 1px solid rgba(154, 154, 154, 0.52);
@@ -385,12 +441,12 @@ li.main-menu-current>a {
     display: block;
 }
 
-.login-form p {
+.login-form div {
     margin: 0;
     margin-bottom: 17px;
 }
 
-.login-form input[type="text"],
+.login-form input[type="email"],
 .login-form input[type="password"] {
     box-sizing: border-box;
     width: 240px;
@@ -1615,11 +1671,6 @@ li.main-menu-current>a {
     transform: rotate(-45deg);
 }
 
-.modal-feedback p {
-    margin: 0;
-    padding: 0;
-}
-
 .modal-feedback input,
 .modal-feedback textarea {
     box-sizing: border-box;
@@ -1667,50 +1718,6 @@ li.main-menu-current>a {
 .modal-feedback input:valid,
 .modal-feedback textarea:valid {
     border: 1px solid rgba(178, 178, 178, 0.52);
-}
-
-.label-box {
-    position: relative;
-}
-
-.modal-feedback .label-input {
-    position: absolute;
-    top: -34px;
-    left: 14px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #999999;
-    transition: 2s ease all;
-    pointer-events: none;
-}
-
-.label-textarea {
-    position: absolute;
-    top: -153px;
-    left: 14px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #999999;
-    transition: 2s ease all;
-    pointer-events: none;
-}
-
-.modal-feedback input:focus ~ .label-box .label-input,
-.modal-feedback textarea:focus ~ .label-box .label-textarea {
-    font-size: 11px;
-    line-height: 13px;
-    color: #5b9ddf;
-    transform: translateY(-24px);
-}
-
-.modal-feedback input:valid ~ .label-box .label-input,
-.modal-feedback textarea:valid ~ .label-box .label-textarea{
-    font-size: 11px;
-    line-height: 13px;
-    color: #999999;
-    transform: translateY(-24px);
 }
 
 .btn-modal {
