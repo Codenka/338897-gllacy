@@ -1224,6 +1224,8 @@ textarea:focus ~ .label-box .label-textarea {
     position: absolute;
     left: 0;
     z-index: 1;
+    width: 100%;
+    height: 430px;
     border: 0;
 }
 
