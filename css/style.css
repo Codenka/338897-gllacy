@@ -16,6 +16,12 @@ body > input[type="radio"] {
     display: none;
 }
 
+.catalog-page {
+    background-color: #849d8f;
+    background-image: url("../img/catalog-bg.png");
+    background-repeat: repeat-x;
+}
+
 a {
     color: inherit;
 }
@@ -1936,4 +1942,17 @@ textarea:focus ~ .label-box .label-textarea {
     margin-left: 292px;
     padding: 7px 23px;
     padding-bottom: 13px;
+}
+
+input:visited ~ .label-box .label-input,
+textarea:visited ~ .label-box .label-textarea {
+    font-size: 11px;
+    line-height: 13px;
+    color: #999999;
+    transform: translateY(-24px);
+}
+
+.modal-feedback input:visited,
+.modal-feedback textarea:visited {
+    border: 1px solid rgba(178, 178, 178, 0.52);
 }
