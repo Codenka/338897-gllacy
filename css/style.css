@@ -46,12 +46,6 @@ button {
     color: #ffffff;
     text-align: center;
     vertical-align: middle;
-    background-image: -webkit-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -o-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, from(rgb(231,74,53)), to(rgb(242,104,67)));
-    background-image: linear-gradient(to right, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    -webkit-box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
-            box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
     border: none;
     border-radius: 25px;
 }
@@ -66,15 +60,36 @@ button {
     color: #fefefe;
     text-align: center;
     text-decoration: none;
-    vertical-align: middle;
-    background-image: -webkit-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -o-linear-gradient(left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, from(rgb(231,74,53)), to(rgb(242,104,67)));
-    background-image: linear-gradient(to right, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    -webkit-box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
-            box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    vertical-align: top;
+    background: #f26843;
+    background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+    background: -o-linear-gradient(top, #f26843 0%, #e74a35 100%);
+    background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    border-radius: 100px;
+    -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+            box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     border: none;
     border-radius: 25px;
+}
+
+.btn:hover {
+    background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
+    background: -o-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+    background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+            box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+    background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
+    background: -o-linear-gradient(top, #d84732 0%, #e1613e 100%);
+    background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+    -webkit-box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+            box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .site-wrapper {
@@ -282,10 +297,12 @@ li.main-menu-current>a {
     line-height: 16px;
     font-weight: 500;
     text-decoration: none;
+    text-shadow: none;
     background-color: rgba(255, 255, 255, 0.4);
     background-image: url("../img/icon-search.svg");
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: none;
     border-radius: 50%;
 }
 
@@ -582,11 +599,13 @@ textarea:focus ~ .label-box .label-textarea {
     display: block;
     width: 14px;
     height: 14px;
+    text-shadow: none;
     border: none;
     background-color: #f8f7f4;
     background-image: url("../img/cross-small.svg");
     background-position: center center;
     background-repeat: no-repeat;
+    box-shadow: none;
     cursor: pointer;
 }
 
@@ -968,7 +987,7 @@ textarea:focus ~ .label-box .label-textarea {
 .product-item-hits::before {
     content: "";
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     display: block;
     width: 61px;
     height: 61px;
@@ -1032,6 +1051,10 @@ textarea:focus ~ .label-box .label-textarea {
     -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
             box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+}
+
+.product-item:hover {
+    z-index: 1;
 }
 
 .product-item:hover .product-preview-hover {
@@ -1320,7 +1343,7 @@ textarea:focus ~ .label-box .label-textarea {
 .catalog-page h1 {
     margin: 0;
     margin-top: 4px;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -1355,7 +1378,7 @@ textarea:focus ~ .label-box .label-textarea {
 
 .filters legend {
     margin-bottom: 5px;
-    padding-left: 17px;
+    padding-left: 15px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
@@ -1486,7 +1509,7 @@ textarea:focus ~ .label-box .label-textarea {
 .filters-radio {
     position: relative;
     padding-right: 19px;
-    padding-left: 31px;
+    padding-left: 30px;
     cursor: pointer;
 }
 
@@ -1578,13 +1601,16 @@ textarea:focus ~ .label-box .label-textarea {
             box-sizing: border-box;
     width: 144px;
     margin-bottom: 18px;
-    padding: 7px 14px;
+    margin-left: -3px;
+    padding: 6px 14px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
+    text-shadow: none;
     background-color: rgba(255, 255, 255, 0.2);
     background-image: none;
     border: 2px solid #ffffff;
+    box-shadow: none;
     cursor: pointer;
 }
 
@@ -1602,15 +1628,15 @@ textarea:focus ~ .label-box .label-textarea {
             justify-content: flex-end;
     min-width: 190px;
     margin: 0;
-    margin-bottom: 31px;
+    margin-bottom: 29px;
     padding: 0;
     list-style: none;
 }
 
 .pagination-item {
-    width: 25px;
-    height: 25px;
-    margin-right: 3px;
+    width: 27px;
+    height: 27px;
+    margin-right: 1px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 50%;
@@ -1675,7 +1701,7 @@ textarea:focus ~ .label-box .label-textarea {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 18px;
+    padding-top: 24px;
     padding-bottom: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -1690,7 +1716,7 @@ textarea:focus ~ .label-box .label-textarea {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin: 0;
-    margin-top: 17px;
+    margin-top: 12px;
     margin-left: 2px;
     padding: 0;
     font-size: 16px;
@@ -1713,8 +1739,8 @@ textarea:focus ~ .label-box .label-textarea {
     width: 375px;
     margin: 0 auto;
     padding: 0;
-    padding-top: 10px;
-    padding-left: 62px;
+    padding-top: 6px;
+    padding-left: 60px;
     list-style: none;
     text-align: left;
 }
@@ -1763,7 +1789,7 @@ textarea:focus ~ .label-box .label-textarea {
 
 .copyright-wrapper {
     margin-top: -4px;
-    margin-right: 2px;
+    margin-right: 6px;
     font-size: 12px;
     line-height: 18px;
 }
