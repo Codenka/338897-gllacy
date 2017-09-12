@@ -1257,6 +1257,8 @@ textarea:focus ~ .label-box .label-textarea {
     left: 40px;
 }
 
+.subscription input:valid ~ 
+
 .btn-subscription {
     width: 129px;
 }
@@ -1823,7 +1825,7 @@ textarea:focus ~ .label-box .label-textarea {
 
 .modal-feedback {
     position: fixed;
-    top: 340px;
+    bottom: 150px;
     left: 50%;
     z-index: 3;
     display: none;
@@ -1834,6 +1836,10 @@ textarea:focus ~ .label-box .label-textarea {
     border-radius: 10px;
 }
 
+.modal-show {
+    display: block;
+}
+
 .modal-feedback b {
     font-size: 24px;
     line-height: 28px;
@@ -1841,7 +1847,8 @@ textarea:focus ~ .label-box .label-textarea {
     color: #323232;
 }
 
-.feedback-close {
+.btn-close {
+    outline: none;
     position: absolute;
     top: 21px;
     right: 25px;
@@ -1854,8 +1861,8 @@ textarea:focus ~ .label-box .label-textarea {
     cursor: pointer;
 }
 
-.feedback-close::before,
-.feedback-close::after {
+.btn-close::before,
+.btn-close::after {
     content: "";
     position: absolute;
     width: 22px;
@@ -1863,13 +1870,13 @@ textarea:focus ~ .label-box .label-textarea {
     background-color: #323232;
 }
 
-.feedback-close::before {
+.btn-close::before {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
 }
 
-.feedback-close::after {
+.btn-close::after {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
