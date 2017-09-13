@@ -183,7 +183,6 @@ button {
 
 li.main-menu-item>a:hover,
 li.main-menu-item>a:focus {
-    outline: none;
     margin: 0;
     padding: 7px 14px;
     font-size: 16px;
@@ -308,13 +307,13 @@ li.main-menu-current>a {
     background-image: url("../img/icon-search.svg");
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border-radius: 50%;
 }
 
 .search:hover,
 .search:focus {
-    outline: none;
     background-color: #f8f7f4;
     background-image: url("../img/icon-search-hover.svg");
 }
@@ -411,14 +410,12 @@ textarea:focus ~ .label-box .label-textarea {
 }
 
 .user-navigation input:hover {
-    outline: none;
     border: 1px solid rgba(154, 154, 154, 0.52);
     -webkit-box-shadow: inset 0 0 0 1px rgba(154, 154, 154, 0.52);
             box-shadow: inset 0 0 0 1px rgba(154, 154, 154, 0.52);
 }
 
 .user-navigation input:focus {
-    outline: none;
     border: 1px solid rgba(46, 136, 228, 0.52);
     -webkit-box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
             box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
@@ -450,7 +447,6 @@ textarea:focus ~ .label-box .label-textarea {
 
 .login-link:hover,
 .login-link:focus {
-    outline: none;
     color: #323232;
     background-color: #f8f7f4;
     background-image: url("../img/icon-login-hover.svg");
@@ -597,10 +593,6 @@ textarea:focus ~ .label-box .label-textarea {
     vertical-align: middle;
 }
 
-.cart-table-cell-col1 {
-/*    padding: 28px 3px;*/
-}
-
 .btn-cart-remove {
     display: block;
     width: 14px;
@@ -611,7 +603,8 @@ textarea:focus ~ .label-box .label-textarea {
     background-image: url("../img/cross-small.svg");
     background-position: center center;
     background-repeat: no-repeat;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     cursor: pointer;
 }
 
@@ -969,8 +962,8 @@ textarea:focus ~ .label-box .label-textarea {
 .product-item {
     position: relative;
     z-index: 0;
-    margin-right: 26px;
     width: 267px;
+    margin-right: 26px;
     text-align: center;
 }
 
@@ -1021,7 +1014,8 @@ textarea:focus ~ .label-box .label-textarea {
     left: -8px;
     margin: 0;
     padding: 0;
-    filter: drop-shadow(1px 1px 3px rgba(49, 50, 53, 0.5));
+    -webkit-filter: drop-shadow(1px 1px 3px rgba(49, 50, 53, 0.5));
+            filter: drop-shadow(1px 1px 3px rgba(49, 50, 53, 0.5));
 }
 
 .product-price span {
@@ -1243,7 +1237,6 @@ textarea:focus ~ .label-box .label-textarea {
 }
 
 .subscription input:focus {
-    outline: none;
     border: 1px solid rgba(46, 136, 228, 0.52);
     -webkit-box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
             box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
@@ -1262,8 +1255,6 @@ textarea:focus ~ .label-box .label-textarea {
     top: -69px;
     left: 40px;
 }
-
-.subscription input:valid ~ 
 
 .btn-subscription {
     width: 129px;
@@ -1428,6 +1419,13 @@ textarea:focus ~ .label-box .label-textarea {
 
 .filters-select-sort option {
     color: #323232;
+}
+
+.filters-select-sort:hover,
+.filters-select-sort:focus {
+    color: #323232;
+    background-color: #ffffff;
+    background-image: url("../img/select-arrow-gray.svg");
 }
 
 .price-range {
@@ -1607,7 +1605,7 @@ textarea:focus ~ .label-box .label-textarea {
     position: absolute;
     width: 23px;
     height: 20px;
-    background-image: url(../img/filters-checkbox-on.svg);
+    background-image: url("../img/filters-checkbox-on.svg");
     background-size: contain;
     background-position: 0 1px;
     background-repeat: no-repeat;
@@ -1628,8 +1626,22 @@ textarea:focus ~ .label-box .label-textarea {
     background-color: rgba(255, 255, 255, 0.2);
     background-image: none;
     border: 2px solid #ffffff;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     cursor: pointer;
+}
+
+.btn-filters:hover,
+.btn-filters:focus {
+    color: #323232;
+    background-color: #ffffff;
+}
+
+.btn-filters:active {
+    color: #323232;
+    background-color: #ededed;
+    -webkit-box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.8);
+            box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.8);
 }
 
 .pagination-list {
@@ -1753,6 +1765,16 @@ textarea:focus ~ .label-box .label-textarea {
     border-radius: 50%
 }
 
+.btn-social:hover,
+.btn-social:focus {
+    color: rgba(255, 255, 255, 1);
+}
+
+.btn-social:active {
+    -webkit-box-shadow: inset 0 2px 1px 0 #888888;
+            box-shadow: inset 0 2px 1px 0 #888888;
+}
+
 .footer-navigation {
     width: 375px;
     margin: 0 auto;
@@ -1839,6 +1861,8 @@ textarea:focus ~ .label-box .label-textarea {
     margin-left: -240px;
     padding: 16px 26px 16px 24px;
     background-color: #f8f7f4;
+    -webkit-box-shadow: 0 0 500px 500px rgba(50, 50, 50, 0.3);
+            box-shadow: 0 0 500px 500px rgba(50, 50, 50, 0.3);
     border-radius: 10px;
 }
 
@@ -1918,7 +1942,6 @@ textarea:focus ~ .label-box .label-textarea {
     padding-top: 15px;
     border: 1px solid rgba(178,178,178,.5);
     border-radius: 5px;
-    
 }
 
 .modal-feedback input:hover,
@@ -1930,7 +1953,6 @@ textarea:focus ~ .label-box .label-textarea {
 
 .modal-feedback input:focus,
 .modal-feedback textarea:focus {
-    outline: none;
     border: 1px solid rgba(46, 136, 228, 0.52);
     -webkit-box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
             box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
@@ -1942,17 +1964,4 @@ textarea:focus ~ .label-box .label-textarea {
     margin-left: 292px;
     padding: 7px 23px;
     padding-bottom: 13px;
-}
-
-input:visited ~ .label-box .label-input,
-textarea:visited ~ .label-box .label-textarea {
-    font-size: 11px;
-    line-height: 13px;
-    color: #999999;
-    transform: translateY(-24px);
-}
-
-.modal-feedback input:visited,
-.modal-feedback textarea:visited {
-    border: 1px solid rgba(178, 178, 178, 0.52);
 }
