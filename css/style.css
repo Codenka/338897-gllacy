@@ -584,7 +584,7 @@ textarea:focus ~ .label-box .label-textarea {
 .cart-table td {
     padding-top: 8px;
     padding-right: 0;
-    padding-bottom: 14px;
+    padding-bottom: 7px;
     padding-left: 0;
 }
 
@@ -641,23 +641,21 @@ textarea:focus ~ .label-box .label-textarea {
     text-align: center;
 }
 
-.cart-order .cart-table-cell-total,
-.cart-order .cart-table-cell-sum {
-    padding-top: 10px;
+.cart-table-row2 .cart-table-cell-col3 {
+    padding: 0;
+    padding-top: 18px;
+}
+
+.cart-table-total {
+    width: 515px;
+    margin: 0;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding-top: 13px;
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
     color: #323232;
-}
-
-.cart-table-cell-total {
-    width: 470px;
-    text-align: right;
-    border-top: 1px solid #999999;
-}
-
-.cart-table-cell-sum {
-    width: 40px;
     text-align: right;
     border-top: 1px solid #999999;
 }
@@ -665,7 +663,7 @@ textarea:focus ~ .label-box .label-textarea {
 .btn-order {
     margin-bottom: 13px;
     margin-left: 343px;
-    padding: 11px 13px;
+    padding: 10px 14px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
@@ -1535,12 +1533,16 @@ textarea:focus ~ .label-box .label-textarea {
     left: 0;
     width: 15px;
     height: 15px;
-    border: 4px solid #ffffff;
+    border: 4px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
 }
 
+.filters-radio input[type="radio"]:hover + .radio-indicator {
+    border-color: rgba(255, 255, 255, 1);
+}
+
 .filters-radio input[type="radio"]:focus + .radio-indicator {
-    border-color: #ffffff;
+    border-color: rgba(255, 255, 255, 1);
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
 }
@@ -1562,6 +1564,10 @@ textarea:focus ~ .label-box .label-textarea {
 
 .filters-fillings ul {
     width: 688px;
+}
+
+.filters-fillings legend {
+    padding-top: 1px;
 }
 
 .fillings-fruits {
@@ -1586,12 +1592,16 @@ textarea:focus ~ .label-box .label-textarea {
     left: 0;
     width: 17px;
     height: 17px;
-    border: 2px solid #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 3px;
 }
 
+.filters-checkbox input[type="checkbox"]:hover + .checkbox-indicator {
+    border-color: rgba(255, 255, 255, 1);
+}
+
 .filters-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
-    border-color: #ffffff;
+    border-color: rgba(255, 255, 255, 1);
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
 }
@@ -1607,7 +1617,7 @@ textarea:focus ~ .label-box .label-textarea {
     height: 20px;
     background-image: url("../img/filters-checkbox-on.svg");
     background-size: contain;
-    background-position: 0 1px;
+    background-position: 0 0;
     background-repeat: no-repeat;
 }
 
@@ -1768,19 +1778,22 @@ textarea:focus ~ .label-box .label-textarea {
     display: block;
     width: 32px;
     height: 32px;
-    margin-right: 13px; 
+    margin-right: 11px; 
     color: rgba(255, 255, 255, 0.8);
     background-position: 2px 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%
 }
 
 .btn-social:hover,
 .btn-social:focus {
     color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(255, 255, 255, 0.7);
 }
 
 .btn-social:active {
+    color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(255, 255, 255, 0.7);
     -webkit-box-shadow: inset 0 2px 1px 0 #888888;
             box-shadow: inset 0 2px 1px 0 #888888;
 }
